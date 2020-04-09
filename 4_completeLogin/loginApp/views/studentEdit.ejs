@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+</head>
+<body>
+    <h1><%= title %></h1>
+    <form action="/edittingStudent/<%= records._id %>" method="post">
+        <div>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="studentName" value='<%= records.name %>'>
+        </div>
+        <div>
+            <label for="class">Class</label>
+            <input type="text" id="class" name="studentClass" value='<%= records.class %>'>
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="studentEmail" value='<%= records.email %>'>
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="studentPassword" value='<%= records.password %>'>
+        </div>
+        <div>
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+    <div><a href="/editCancel/<%= records._id%>">Cancel</a></div>
+</body>
+</html>

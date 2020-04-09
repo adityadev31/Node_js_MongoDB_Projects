@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+</head>
+<body>
+    <h1><%= title %></h1>
+    <h3>Welcome <%= name %></h3>
+    <p>name = <%= records.name %></p>
+    <p>class = <%= records.class %></p>
+    <p>email = <%= records.email %></p>
+    <p>pass = <%= records.password %></p>
+    
+    <p><a href="/studentEdit/<%= records._id %>">Edit</a></p>
+    <p><a href="/studentDelete/<%= records._id %>">Delete Account</a></p>
+    <p><a href="/studentlogout">Logout</a></p>
+</body>
+</html>

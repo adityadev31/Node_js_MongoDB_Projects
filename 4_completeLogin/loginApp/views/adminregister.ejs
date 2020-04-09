@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+</head>
+<body>
+    <h1><%= title %></h1>
+    <% if(msg !=''){ %>
+        <p><%= msg %></p>
+    <% } %>
+    <form action="/adminregister" method="post">
+        <div>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="adminName">
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="adminEmail">
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="adminPassword">
+        </div>
+        <div>
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+    <div><a href="/adminlogin">Already have an account</a></div>
+    <div><a href="/">Back 2 main page</a></div>
+</body>
+</html>

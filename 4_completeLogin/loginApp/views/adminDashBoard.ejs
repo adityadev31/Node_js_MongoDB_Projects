@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+</head>
+<body>
+    <h1>Hi! <%= records.name %></h1>
+    <div>
+        <p>Admin Name = <%= records.name %></p>
+        <p>Admin Email = <%= records.email %></p>
+        <p>Admin Pass = <%= records.password %></p>
+    </div>
+    <p><a href="/adminlogout">Log out</a></p>
+
+    <h3>Students data</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>SNo.</th>
+                <th>Name</th>
+                <th>Class</th>
+                <th>Email</th>
+                <!-- <th>Actions</th> -->
+            </tr>
+        </thead>
+        <tbody>
+            <% if(sData.length > 0){
+                let count = 1;
+                sData.forEach(function(rows){ %>
+                    <tr>
+                        <td><%= count++; %></td>
+                        <td><%= rows.name %></td>
+                        <td><%= rows.class %></td>
+                        <td><%= rows.email %></td>
+                        <!-- <td><a href="/adminStudEdit/<%= records._id %>-<%= rows._id %>">Edit</a></td>
+                        <td><a href="/adminStudDelete/<%= records._id %>-<%= rows._id %>">Delete</a></td> -->
+                    </tr>
+                <% });
+            }
+             else{ %>
+                <tr>
+                    <td colspan="4">No Records Found!</td>
+                </tr>
+            <% } %>
+        </tbody>
+    </table>
+</body>
+</html>
