@@ -1,24 +1,24 @@
 <%- include('partials/header') %>
 
-<form class="w-50 p-4" action="/signupaction" method="post">
+<form class="adiForms" action="/signupaction" method="post">
     <% if(msg!=''){ %>
-        <p class="p-2"><%= msg %></p>
+      <p style="padding: 10px;"><%= msg %></p>
     <% } %>
     <div class="form-group">
-      <label for="name">User Name</label>
+      <label for="name">User Name <i class="fa fa-user" aria-hidden="true"></i></label>
       <input type="text" class="form-control" id="name" name="name">
     </div>
     <div class="form-group">
-      <label for="email">Email address</label>
+      <label for="email">Email <i class="fa fa-envelope" aria-hidden="true"></i></label>
       <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
     </div>
     <div class="form-group">
-      <label for="password">Password</label>
+      <label for="password">Password <i class="fa fa-unlock-alt" aria-hidden="true"></i></label>
       <input type="password" class="form-control" id="password" name="password">
     </div>
     <button type="submit" class="btn btn-primary">SignUp</button>
+    <a class="adiLinker" href="/login">Already Have an Account ?</a>
 </form>
 
-<a href="/login">Already Have an Account ?</a>
 
 <%-include('partials/footer') %>
